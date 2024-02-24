@@ -13,8 +13,8 @@ int main()
 	printf("b = "); scanf("%f", &b);
 	printf("c = "); scanf("%f", &c);
 
-	sprintf(output, "Equation is:\n%g * x^2 + %g * x + %g = 0.00 \n", a, b, c);
-	puts(output);
+	sprintf(outputEquation, "Equation is:\n%g * x^2 + %g * x + %g = 0.00 \n", a, b, c);
+	puts(outputEquation);
 
 	if (a == 0)
 	{
