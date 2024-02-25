@@ -27,21 +27,21 @@ int main()
 	{
 		if (b == 0)
 		{
-			if (c == 0)
+			if (c == 0) //a, b, c равны нулю
 			{
 				puts("x1 and x2 are any numbers");
 			}
-			else
+			else // a, b равны нулю, c не равен нулю
 			{
 				puts("No solutions");
 			}
 		}
-		else if (c == 0)
+		else if (c == 0) // a, c равны нулю, b не равен нулю
 		{
 			x1 = x2 = 0;
 			printf("x = %g\n", x1);
 		}
-		else
+		else // a равен нулю, b и с не равны нулю 
 		{
 			x1 = x2 = (float)( -1 * (c / b));
 			printf("x = %g\n", x1);
@@ -51,16 +51,16 @@ int main()
 	{
 		if (b == 0)
 		{
-			if (c == 0)
+			if (c == 0) //a не равен нулю, b, c равны нулю
 			{
 				x1 = x2 = 0;
 				printf("x = %g\n", x1);
-			}
+			} // a, c не равны нулю, b равен нулю и либо a > 0 и c < 0, либо a < 0 и c > 0
 			else if ((a > 0 && c < 0) || (a < 0 && c > 0))
 			{
 				x1 = x2 = (float)sqrt(-1 * (c / a));
 				printf("x = %g\n", x1);
-			}
+			} // a, c не равны нулю, b равен нулю и либо a < 0 и c < 0, либо a > 0 и c > 0
 			else
 			{
 				puts("No solutions");
@@ -68,7 +68,7 @@ int main()
 		}
 		else
 		{
-			if (c == 0)
+			if (c == 0) // a, b не равны нулю, с равен нулю
 			{
 				x1 = 0;
 				x2 = (float)(-1 * (b / a));
@@ -76,23 +76,25 @@ int main()
 			}
 			else
 			{
+				//Вычисление дискриминанта
 				D = (float)(pow(b, 2) - 4 * a * c);
 
 				if (D >= 0)
 				{
+					//Вычисление корней уравнения при D>=0
 					x1 = (float)(-1 * b - sqrt(D)) / (2 * a);
 					x2 = (float)(-1 * b + sqrt(D)) / (2 * a);
 
-					if (x1 == x2)
+					if (x1 == x2) //дискриминант равен нулю
 					{
 						printf("x = %g\n", x1);
 					}
-					else
+					else //дискриминант больше нуля
 					{
 						printf("x1 = % g\nx2 = % g\n", x1, x2);
 					}
 				}
-				else
+				else //дискриминант меньше нуля
 				{
 					puts("No solutions");
 				}
