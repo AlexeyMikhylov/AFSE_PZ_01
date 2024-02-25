@@ -3,18 +3,16 @@
 
 int main()
 {
-	float a = 0.0, b = 0.0, c = 0.0; //
-	char outputEquation[256];
-	char outputResult[256];
-	float x1, x2, d; //
+	float a = 0.0, b = 0.0, c = 0.0; // коэффициенты при неизвестных
+	float x1, x2, d; // корни уравнения, дискриминант
 
-	puts("Input сoefficient of equation:\n");
+	puts("Input сoefficient of equation:\n"); //ввод коэффициентов с клавиатуры
 	printf("a = "); scanf("%f", &a);
 	printf("b = "); scanf("%f", &b);
 	printf("c = "); scanf("%f", &c);
 
-	sprintf(outputEquation, "Inputted equation is:\n%g * x^2 + %g * x + %g = 0.00 \n", a, b, c);
-	puts(outputEquation);
+	//Вывод полученного уравнения
+	printf("Inputted equation is:\n%g * x^2 + %g * x + %g = 0.00 \n", a, b, c);
 
 	if (a == 0)
 	{
@@ -31,13 +29,12 @@ int main()
 		else if (c == 0)
 		{
 			x1 = x2 = 0;
-			sprintf(outputResult, "x = %g\n", x1);
-			puts(outputResult);
+			printf("x = %g\n", x1);
 		}
 		else
 		{
 			x1 = x2 = (float)( -1 * (c / b));
-			printf("x = %.2f\n", x1);
+			printf("x = %g\n", x1);
 		}
 	}
 	else
@@ -47,15 +44,13 @@ int main()
 			if (b == 0)
 			{
 				x1 = x2 = 0;
-				sprintf(outputResult, "x = %g\n", x1);
-				puts(outputResult);
+				printf("x = %g\n", x1);
 			}
 			else
 			{
 				x1 = 0;
 				x2 = (float)(-1 * (b / a));
-				sprintf(outputResult, "x1 = %g\nx2 = %g\n", x1, x2);
-				puts(outputResult);
+				printf("x1 = %g\nx2 = %g\n", x1, x2);
 
 			}
 		}
@@ -64,8 +59,7 @@ int main()
 			if (b == 0 && ((a > 0 && c < 0) || (a < 0 && c > 0)))
 			{
 				x1 = x2 = (float)sqrt(-1 * (c / a));
-				sprintf(outputResult, "x = %g\n", x1);
-				puts(outputResult);
+				printf("x = %g\n", x1);
 			}
 			else
 			{
@@ -77,13 +71,11 @@ int main()
 
 					if (x1 == x2)
 					{
-						sprintf(outputResult, "x = %g\n", x1);
-						puts(outputResult);
+						printf("x = %g\n", x1);
 					}
 					else
 					{
-						sprintf(outputResult,"x1 = %g\nx2 = %g\n", x1, x2);
-						puts(outputResult);
+						printf("x1 = % g\nx2 = % g\n", x1, x2);
 					}
 				}
 				else
