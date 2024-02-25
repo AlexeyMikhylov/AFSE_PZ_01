@@ -8,6 +8,7 @@ int main()
 
 	puts("Input coefficients of equation:\n");
 	//ввод коэффициентов с клавиатуры
+
 	/*printf("a = "); scanf("%f", &a);
 	printf("b = "); scanf("%f", &b);
 	printf("c = "); scanf("%f", &c);*/
@@ -25,7 +26,7 @@ int main()
 	else puts("Not a number");
 
 	//Вывод полученного уравнения
-	printf("Inputted equation is:\n%g * x^2 + %g * x + %g = %g \n", a, b, c, 0.00);
+	printf("Inputted equation is:\n%g*x^2 + %g*x + %g = %g \n", a, b, c, 0.00);
 
 	if (a == 0)
 	{
