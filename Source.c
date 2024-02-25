@@ -6,7 +6,7 @@ int main()
 	float a = 0.0, b = 0.0, c = 0.0; // коэффициенты при неизвестных
 	float x1, x2, D; // корни уравнения, дискриминант
 
-	puts("Input сoefficient of equation:\n"); //ввод коэффициентов с клавиатуры
+	puts("Input сoefficients of equation:\n"); //ввод коэффициентов с клавиатуры
 	printf("a = "); scanf("%f", &a);
 	printf("b = "); scanf("%f", &b);
 	printf("c = "); scanf("%f", &c);
