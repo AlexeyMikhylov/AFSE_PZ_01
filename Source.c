@@ -13,24 +13,15 @@ int main()
 	printf("c = "); scanf("%f", &c);*/
 
 	printf("a = ");
-	if (scanf("%f", &a) > 0)
-	{
-		//printf("a = %g\n", a);
-	}
+	if (scanf("%f", &a) > 0){}
 	else puts("Not a number");
 	
 	printf("b = ");
-	if (scanf("%f", &b) > 0)
-	{
-		//printf("b = %g\n", b);
-	}
+	if (scanf("%f", &b) > 0){}
 	else puts("Not a number");
 	
 	printf("c = ");
-	if (scanf("%f", &c) > 0)
-	{
-		//printf("c = %g\n", c);
-	}
+	if (scanf("%f", &c) > 0){}
 	else puts("Not a number");
 
 	//Вывод полученного уравнения
