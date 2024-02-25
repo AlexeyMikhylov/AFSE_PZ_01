@@ -8,11 +8,6 @@ int main()
 
 	puts("Input coefficients of equation:\n");
 	//ввод коэффициентов с клавиатуры
-
-	/*printf("a = "); scanf("%f", &a);
-	printf("b = "); scanf("%f", &b);
-	printf("c = "); scanf("%f", &c);*/
-
 	printf("a = ");
 	if (scanf("%f", &a) > 0){}
 	else puts("Not a number");
