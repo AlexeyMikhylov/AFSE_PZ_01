@@ -1,4 +1,4 @@
-#include <stdio.h>
+﻿#include <stdio.h>
 #include <math.h>
 
 int main()
@@ -8,12 +8,12 @@ int main()
 	char outputResult[256];
 	float x1, x2, d; //
 
-	puts("Input a, b, c:\n");
+	puts("Input сoefficient of equation:\n");
 	printf("a = "); scanf("%f", &a);
 	printf("b = "); scanf("%f", &b);
 	printf("c = "); scanf("%f", &c);
 
-	sprintf(outputEquation, "Equation is:\n%g * x^2 + %g * x + %g = 0.00 \n", a, b, c);
+	sprintf(outputEquation, "Inputted equation is:\n%g * x^2 + %g * x + %g = 0.00 \n", a, b, c);
 	puts(outputEquation);
 
 	if (a == 0)
