@@ -16,19 +16,19 @@ int main()
 	{
 		printf("a = %g\n", a);
 	}
-	else printf("Not a number.\n");
+	else puts("Not a number");
 	
 	if (scanf("%f", &b) > 0)
 	{
 		printf("b = %g\n", b);
 	}
-	else printf("Not a number.\n");
+	else puts("Not a number");
 	
 	if (scanf("%f", &c) > 0)
 	{
 		printf("c = %g\n", c);
 	}
-	else printf("Not a number.\n");
+	else puts("Not a number");
 
 	//Вывод полученного уравнения
 	printf("Inputted equation is:\n%g * x^2 + %g * x + %g = 0.00 \n", a, b, c);
