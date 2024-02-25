@@ -41,7 +41,8 @@ int main()
 			{
 				puts("x1 and x2 are any numbers");
 			}
-			else {
+			else
+			{
 				puts("No solutions");
 			}
 		}
@@ -65,7 +66,7 @@ int main()
 				x1 = x2 = 0;
 				printf("x = %g\n", x1);
 			}
-			else if ( (a > 0 && c < 0) || (a < 0 && c > 0) )
+			else if ((a > 0 && c < 0) || (a < 0 && c > 0))
 			{
 				x1 = x2 = (float)sqrt(-1 * (c / a));
 				printf("x = %g\n", x1);
@@ -108,4 +109,6 @@ int main()
 			}
 		}
 	}
+
+	return 0;
 }
