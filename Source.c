@@ -4,7 +4,7 @@
 int main()
 {
 	float a = 0.0, b = 0.0, c = 0.0; // коэффициенты при неизвестных
-	float x1, x2, d; // корни уравнения, дискриминант
+	float x1, x2, D; // корни уравнения, дискриминант
 
 	puts("Input сoefficient of equation:\n"); //ввод коэффициентов с клавиатуры
 	printf("a = "); scanf("%f", &a);
@@ -39,35 +39,39 @@ int main()
 	}
 	else
 	{
-		if (c == 0)
+		if (b == 0)
 		{
-			if (b == 0)
+			if (c == 0)
 			{
 				x1 = x2 = 0;
 				printf("x = %g\n", x1);
 			}
-			else
-			{
-				x1 = 0;
-				x2 = (float)(-1 * (b / a));
-				printf("x1 = %g\nx2 = %g\n", x1, x2);
-
-			}
-		}
-		else
-		{
-			if (b == 0 && ((a > 0 && c < 0) || (a < 0 && c > 0)))
+			else if ( (a > 0 && c < 0) || (a < 0 && c > 0) )
 			{
 				x1 = x2 = (float)sqrt(-1 * (c / a));
 				printf("x = %g\n", x1);
 			}
 			else
 			{
-				d = (float)(pow(b, 2) - 4 * a * c);
-				if (d >= 0)
+				puts("No solutions");
+			}
+		}
+		else
+		{
+			if (c == 0)
+			{
+				x1 = 0;
+				x2 = (float)(-1 * (b / a));
+				printf("x1 = %g\nx2 = %g\n", x1, x2);
+			}
+			else
+			{
+				D = (float)(pow(b, 2) - 4 * a * c);
+
+				if (D >= 0)
 				{
-					x1 = (float)(-1 * b - sqrt(d)) / (2 * a);
-					x2 = (float)(-1 * b + sqrt(d)) / (2 * a);
+					x1 = (float)(-1 * b - sqrt(D)) / (2 * a);
+					x2 = (float)(-1 * b + sqrt(D)) / (2 * a);
 
 					if (x1 == x2)
 					{
